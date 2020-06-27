@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}">
+
+</head>
+<body>
+    <h3>Update task</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+<label>Title</label>
+        {{form.title}}
+        <label>Is complete</label>
+        {{form.complete}}
+        <input class="btn btn-info"  type="submit" name="Update Task" >
+    </form>
+</body>
+</html>
